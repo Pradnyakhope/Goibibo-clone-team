@@ -27,11 +27,6 @@ body {
     z-index: 1000;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #f56a00;
-}
 .logo img {
     width: 110px;
     height: 40px;
@@ -50,11 +45,9 @@ body {
     display: flex;
     align-items: center;
 }
+
 .icon {
     font-size: 25px;
-}
-
-.nav-item .icon {
     margin-right: 5px;
 }
 
@@ -64,6 +57,7 @@ body {
     align-items: center;
     padding-right: 50px;
 }
+
 .user-section a {
     text-decoration: none;
     color: black;
@@ -75,28 +69,25 @@ body {
     background-color: white;
     border: 2px solid #0077ff;
     color: black;
-    padding-bottom: 10px;
-    padding-right:10px ;
-    padding-left: 10px;
+    padding: 5px 10px;
     border-radius: 5px;
     text-decoration: none;
     margin-left: 20px;
 }
+
 .login-btn span {
     position: relative;
     top: 7px;
     text-align: center;
     color: #0077ff;
 }
-.nav-links a:hover{
+
+.nav-links a:hover,
+.user-section .mytrip:hover,
+.user-section .login a:hover {
     color: #E27826;
 }
-.user-section .mytrip:hover{
-    color: #E27826;
-}
-.user-section .login a:hover{
-    color: #E27826;
-}
+
 /* Hamburger Menu */
 .hamburger-menu {
     display: none;
@@ -113,14 +104,16 @@ body {
     color: white;
 }
 
-/* flight booking section */
+/* Flight booking section */
 .flights {
     width: 100%;
     height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 20px;
 }
+
 .booking {
     margin: 10px;
     width: 80%;
@@ -131,15 +124,13 @@ body {
 }
 
 .radio-container {
-    position: relative;
-    top: 18px;
-    left: 45px;
     margin: 10px;
+    display: inline-block;
 }
+
 .form-group {
     position: relative;
     padding: 40px;
-    z-index: 120;
 }
 
 .form-group input {
@@ -172,7 +163,7 @@ input[type="text"] {
 
 label {
     font-size: 18px;
-    margin: 0 20px 0 20px;
+    margin: 0 20px;
 }
 
 label span {
@@ -183,6 +174,7 @@ label span {
 .swap-icon {
     font-size: 50px;
     color: #f56a00;
+    cursor: pointer;
 }
 
 select {
@@ -206,9 +198,6 @@ select {
 
 .benefits {
     margin-top: 5px;
-    position: relative;
-    top: 10px;
-    left: 15px;
     height: 50px;
     width: 200px;
     font-size: 12px;
@@ -241,10 +230,11 @@ select {
     height: 50px;
 }
 
-.searchbutton{
+.searchbutton {
     display: flex;
     justify-content: center;
 }
+
 .search-button {
     width: 20%;
     height: 60px;
@@ -257,9 +247,8 @@ select {
     cursor: pointer;
 }
 
-
 /* Media Queries for Responsiveness */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     .nav-links {
         display: none;
         flex-direction: column;
@@ -291,10 +280,41 @@ select {
     .calendar,
     select {
         width: 100%;
+        margin: 10px 0;
     }
 
     .swap-icon {
         display: none;
+    }
+
+    .cards {
+        width: 45%;
+        margin: 10px auto;
+    }
+
+    .search-button {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .heading h2 {
+        font-size: 24px;
+    }
+
+    .form-group input,
+    .calendar,
+    select {
+        font-size: 14px;
+    }
+
+    .search-button {
+        height: 50px;
+        font-size: 16px;
+    }
+
+    .cards {
+        width: 100%;
     }
 }
 
@@ -312,6 +332,10 @@ select {
     .search-button {
         height: 50px;
         font-size: 16px;
+    }
+
+    .cards {
+        width: 100%;
     }
 }
 
@@ -835,14 +859,3 @@ hr{
 
 /* Existing CSS content */
 /* NAVBAR */
-.navbar {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ffffff;
-    padding: 2px 20px;
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-}
